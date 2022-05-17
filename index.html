@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">B'Day + Sis Wedding - 18 December 2022</h1>
+        <div class="time-container">
+            <div class="time">
+                <p id="months"></p>
+                <p>Months</p>
+            </div>
+            <div class="time">
+                <p id="days"></p>
+                <p>Days</p>
+            </div>
+            <div class="time">
+                <p id="hours"></p>
+                <p>Hours</p>
+            </div>
+            <div class="time">
+                <p id="minutes"></p>
+                <p>Minutes</p>
+            </div>
+            <div class="time">
+                <p id="seconds"></p>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var months = document.getElementById('months');
+        var days = document.getElementById('days');
+        var hours = document.getElementById('hours');
+        var minutes = document.getElementById('minutes');
+        var seconds = document.getElementById('seconds');
+
+        const bday = new Date(`December 18 2022 00:00:00`);
+
+        function updateTime(){
+            currentDate = new Date();
+            countdown = bday - currentDate;
+
+            var mo = Math.floor(countdown/1000/60/60/24/30);
+            var d = Math.floor(countdown/1000/60/60/24 % 30);
+            var h = Math.floor(countdown/1000/60/60 % 24);
+            var mi = Math.floor(countdown/1000/60 % 60);
+            var s = Math.floor(countdown/1000 % 60);
+
+            months.innerHTML = mo;
+            days.innerHTML = d;
+            hours.innerHTML = h;
+
+            if(mi >= 0, mi < 10){
+                mi = "0" + mi;
+            }
+            else{
+                mi = mi;
+            }
+            minutes.innerHTML = mi;
+
+            if(s < 10){
+                s = "0" + s;
+            }
+            else{
+                s = s;
+            }
+            seconds.innerHTML = s;
+
+            console.log(currentDate);
+            console.log(bday);
+        }
+
+    setInterval(() => {
+        updateTime()
+        }, 1000
+    );
+    </script>
+</body>
+</html>
