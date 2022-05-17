@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root{
+    --font: 'Montserrat', sans-serif;
+}
+
+body{
+    font-family: var(--font);
+    background-image: url(https://winpoin.com/wp-content/uploads/2021/11/Download-Wallpaper-Windows-11-SE-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.time-container{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 15px 25px;
+    border-radius: 15px;
+}
+
+.title {
+    margin: 50px 0;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 15px 25px;
+    border-radius: 15px;
+}
+
+.time p{
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
